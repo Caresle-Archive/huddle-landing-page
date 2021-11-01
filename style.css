@@ -1,0 +1,175 @@
+:root {
+	--violet: hsl(257, 40%, 49%);
+	--violet-dark: hsl(257, 42%, 35%);
+	--soft-magenta: hsl(300, 69%, 71%);
+	--white: #fff;
+
+	--font-normal: 400;
+	--font-bold: 600;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	color: var(--white);
+}
+
+html, body {
+	margin: 0;
+	height: 100vh;
+	font-size: 16px;
+	background-color: var(--violet);
+	background-image: url(./images/bg-mobile.svg);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+div {
+	width: 90%;
+}
+
+.logo-container > img {
+	height: 32px;
+	margin-top: 1.5rem;
+}
+
+div + img {
+	width: 85%;
+	margin: 4rem auto;
+}
+
+h1, p {
+	text-align: center;
+	width: 95%;
+	margin: 1rem auto;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: var(--font-normal);
+}
+
+button {
+	cursor: pointer;
+}
+
+.btn-primary-container {
+	display: flex;
+	justify-content: center;
+}
+
+.btn-primary {
+	margin-top: 1rem;
+	background-color: var(--white);
+	color: var(--violet);
+	border: 1px solid var(--white);
+	border-radius: 1.5rem;
+	width: 70%;
+	height: 48px;
+	font-size: 1rem;
+	box-shadow: 0 0 4px 2px var(--violet-dark);
+	transition: background-color .15s ease-in;
+}
+
+.btn-primary:hover {
+	background-color: var(--soft-magenta);
+	border: 1px solid var(--soft-magenta);
+	color: var(--white);
+}
+
+.social-container {
+	display: flex;
+	justify-content: center;
+}
+
+.btn-round {
+	border: 1px solid var(--white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 2rem .25rem;
+}
+
+.icon {
+	font-size: 1.5rem;
+}
+
+.btn-round:hover {
+	border: 1px solid var(--soft-magenta);
+}
+
+.btn-round:hover > .icon {
+	color: var(--soft-magenta);
+}
+
+@media only screen and (min-width: 1280px) {
+	body {
+		background-image: url(./images/bg-desktop.svg);
+	}
+	
+	main {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 64px repeat(4, 20vh);
+		grid-template-areas: "logo ."
+		"img title" "img para" "img btn" ". social";
+	}
+
+	.logo-container {
+		grid-area: logo;
+	}
+
+	.logo-container > img {
+		height: 64px;
+		margin: 1.5rem auto;
+	}
+
+	.logo-container + img {
+		grid-area: img;
+		margin-top: 6rem;
+	}
+
+	h1 {
+		grid-area: title;
+	}
+
+	p {
+		grid-area: para;
+		font-size: 1.25rem;
+		text-align: left;
+	}
+
+	.btn-primary-container {
+		grid-area: btn;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	.btn-primary {
+		width: 40%;
+	}
+
+	.social-container {
+		grid-area: social;
+		justify-content: flex-end;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	main {
+		width: 1440px;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+}
