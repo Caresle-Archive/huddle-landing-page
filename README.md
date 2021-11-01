@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
-- Live Site URL: [Github Pages]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/html-css-5Z7a8qEwn)
+- Live Site URL: [Github Pages](https://caresle.github.io/huddle-landing-page/)
 
 ## My process
 
